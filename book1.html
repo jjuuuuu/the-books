@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>책 1</title>
+    <style>
+ /* 기본 스타일 */
+ body {
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+      margin: 20px;
+    }
+
+    @media (max-width: 600px) {
+  .narration {
+    max-width: 90%; /* 화면의 90% 너비로 제한 */
+  }
+}
+
+/* 씬 넘버 스타일 */
+    .scene-number {
+      font-weight: bold; /* 볼드체로 씬 넘버 강조 */
+      font-size: 1.2em; /* 크기를 살짝 키움 (선택 사항) */
+      margin-bottom: 5px; /* 아래 공간 추가 */
+      display: block; /* 씬 넘버를 한 줄로 표시 */
+    }
+
+    .dialogue {
+      display: inline-block;
+      max-width: 900px; /* 지문의 문단 너비 제한 */
+      margin: 1px 0;
+      padding-left: 50px; /* 대사 시작 위치 조정 */
+      text-indent: -45px; /* 첫 줄은 왼쪽으로 이동 */
+      border-radius: 5px;
+      line-height: 1.8; /* 줄 간격을 줄이려면 이 값을 낮추세요 */
+      display: block; /* 각 대사를 한 줄씩 표시 */
+      
+    }
+
+    .narration {
+      max-width: 900px; /* 지문의 문단 너비 제한 */
+      margin: 10px; /* 중앙 정렬 */
+      padding: 10px;
+      line-height: 1.8; /* 지문의 줄 간격 */
+      text-align: justify; /* 양쪽 정렬 */
+      font-style: normal; /* 지문을 기울임체로 표시 (선택 사항) */
+      color: #555; /* 지문 색상 변경 */
+    }
+
+    
+
+    /* 각 인물별 강조 스타일 */
+    .highlight-dongjun {
+      background-color: #f3e881;
+      color: #000;
+    }
+
+    .highlight-yejun {
+      background-color: #90caf9;
+      color: #000;
+    }
+
+    .highlight-boyfriend {
+      background-color: #f990e7;
+      color: #000;
+    }
+
+    .highlight-husband {
+      background-color: #90f9aa;
+      color: #000;
+    }
+
+    /* 인물 이름 클릭 스타일 */
+    .character-name {
+      font-weight: bold;
+      color: #555;
+      cursor: pointer;
+    }
+
+    .character-name:hover {
+      text-decoration: underline;
+    }
+
+    #backToTop {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background-color: #69aef8;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      padding: 10px 15px;
+      font-size: 14px;
+      cursor: pointer;
+      display: none; /* 초기 상태에서 숨김 */
+      box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+    }
+
+    #backToTop:hover {
+      background-color: #0056b3;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+
+    </style>
+</head>
+<body>
+
+  <h1>목차</h1>
+  <ul class="table-of-contents">
+    <li><a href="#scene1">#1</a></li>
+    <li><a href="#scene2">#2</a></li>
+    <li><a href="#scene3">#3</a></li>
+    <li><a href="#scene4">#4</a></li>
+    <li><a href="#scene5">#5</a></li>
+    <li><a href="#scene6">#6</a></li>
+    <li><a href="#scene7">#7</a></li>
+    <li><a href="#scene8">#8</a></li>
+    <li><a href="#scene9">#9</a></li>
+    <li><a href="#scene10">#10</a></li>
+    <li><a href="#scene11">#11</a></li>
+    <li><a href="#scene12">#12</a></li>
+    <li><a href="#scene13">#13</a></li>
+    <li><a href="#scene14">#14</a></li>
+    <li><a href="#scene15">#15</a></li>
+    <li><a href="#scene16">#16</a></li>
+    <li><a href="#scene17">#17</a></li>
+    <li><a href="#scene18">#18</a></li>
+    <li><a href="#fin">fin</a></li>
+  </ul>
+     
+
+
+
+  
+    <h1>매형이 생긴 날</h1> 
+    <p>
+        
+      <div id="scene1" class="scene-number">#1. 저녁. 동준과 예준의 집. </div>
+        <div class="narration">어느 가을 늦은 저녁. 아무도 없지만 불이 켜진 작은 거실. 벽 한쪽으로 오래된 소파가 놓여있고 건너편으로 집과 어울리지 않는 최신형 TV가 서 있다. 그 위쪽으론 커다란 가족사진 두 개가 걸려있다. 한 사진엔 부부와, 다소 양아치 티가 나는 교복을 입은 딸과, 치켜 올라간 눈매를 가진 초등학교 저학년생 아들이 모여있고, 다른 사진엔 초등학교 졸업식 사진인지, 꽃다발을 든 다소 우울한 표정의 아들과 몇 년이 지나 정신을 차린 듯 단정하게 차려입고 밝은 표정을 짓는 딸의 모습이 담겨있다. 다른 곳도 둘러보면 이곳은 오래된 빌라처럼 보인다. 군데군데 낡은 흔적이 남아있지만, 그 이상으로 넘치는 발랄한 생활감은 이곳이 따듯하고 정감가는 집임을 알 수 있게 해 준다. 그때 한쪽 방문을 벌컥 열고 덩치 큰 고등학생, 동준이 자신의 방을 나와 성큼성큼 거실을 가로질러 건너편 문을 향해 간다.</div>
+        
+        <div id="scene2" class="scene-number">#2. 저녁. 예준의 방</div>
+        <div class="narration">침대에 누워 핸드폰으로 철 지난 예능을 보며 낄낄대는 예준. 하루 일과를 마무리하는 듯 편한 차림에 머리를 틀어 올려 묶은 상태. 동준이 문을 벌컥 열고 
+        상체만 들이민 채 퉁명스러운 목소리로 예준에게 묻는다.</div>
+        
+        <div class="dialogue"><span class="character-name" data-character="동준">동준:</span>            담배 있냐?</div>
+        <div class="dialogue"><span class="character-name" data-character="예준">예준:</span>            있냐? 내가 니 친구냐?</div>
+        <div class="dialogue"><span class="character-name" data-character="동준">동준:</span>            아, 있냐고.</div>
+        
+        
+        <div class="narration">예준은 보던 영상을 잠시 멈춰놓고, 몸을 일으켜 앉은 후 동준에게 말한다. </div>
+        
+        
+        <div class="dialogue"><span class="character-name" data-character="예준">예준:</span>             하, 이 새끼. 입혀주고, 멕여주고, 재워줬더니 이제 누나한테 담배도 뺏어 갈라고 하네. 야 고딩. 교칙 안 봐? 
+                   학주쌤이 담배 피지 말라고 안 해?</div>
+        <div class="dialogue"><span class="character-name" data-character="동준">동준:</span>             내가 담배를 누구한테 배웠는데.</div>
+        <div class="dialogue"><span class="character-name" data-character="예준">예준:</span>             내가 가르쳤냐? 내 책상에 있던 거 지가 몰래 빼서 폈으면서. </div>
+        <div class="dialogue"><span class="character-name" data-character="동준">동준:</span>             아, 됐고. 담배 없냐고.</div>
+    
+        
+        <div class="narration">예준, 귀찮다는 듯 다시 자리에 누워 영상을 튼다.</div>
+        
+        
+        <div class="dialogue"><span class="character-name" data-character="예준">예준:</span>            없어. 끊었어.</div>
+        <div class="dialogue"><span class="character-name" data-character="동준">동준:</span>            개가 똥을 끊지. 니가 담배를 끊었다고?</div>
+        <div class="dialogue"><span class="character-name" data-character="예준">예준:</span>            어. 자꾸 담배 얘기하지마, 담배 땡기니까.</div>
+        <div class="dialogue"><span class="character-name" data-character="동준">동준:</span>            ... 진짜 끊었어?</div>
+        <div class="dialogue"><span class="character-name" data-character="예준">예준:</span>            어! 좀 나가. 나 무도 봐야 돼.</div>
+    
+        <div class="narration">동준, 진심으로 의외라는 듯, 동그란 눈으로 묻는다.</div>
+        
+        <div class="dialogue"><span class="character-name" data-character="동준">동준:</span>            왜?</div>
+        <div class="dialogue"><span class="character-name" data-character="예준">예준:</span>            남자친구 때문에.</div>
+        <div class="dialogue"><span class="character-name" data-character="동준">동준:</span>            왜? 담배 피는 여자는 싫대?</div>
+        <div class="dialogue"><span class="character-name" data-character="예준">예준:</span>            아니.</div>
+        <div class="dialogue"><span class="character-name" data-character="동준">동준:</span>            근데 왜?</div>
+        <div class="dialogue"><span class="character-name" data-character="예준">예준:</span>            그냥.</div>
+        <div class="dialogue"><span class="character-name" data-character="동준">동준:</span>            그냥? 니가 그냥 담배를 끊었다고? ... 니가?</div>
+        <div class="dialogue"><span class="character-name" data-character="예준">예준:</span>            아, 좀 나가! </div>
+    
+        <div class="narration">예준의 짜증에 동준은 문을 닫고 나간다. 그러나, 잠시 후 다시 벌컥 문을 열어 고개만 들이밀고 예준에게 묻는다.</div>
+        
+        <div class="dialogue"><span class="character-name" data-character="동준">동준:</span>            너 그 새끼한테 맞고 다니냐?</div>
+        <div class="dialogue"><span class="character-name" data-character="예준">예준:</span>            뭐? 뭔 개소리야. 안 나가? 공부 안 해?</div>
+        
+        <div class="narration">공부 얘기에 냉큼 예준에게 가운뎃손가락 날리고 문 닫고 나가는 동준.</div>
+        
+        <div class="dialogue"><span class="character-name" data-character="예준">예준:</span>            저 새끼가... 야! 하동준! 일로 와! ... 안 와? 하나. 둘. 셋!</div>
+    
+
+        <div class="narration">동준은 귀찮은 표정으로 문을 연다.</div>
+    
+        <div class="dialogue"><span class="character-name" data-character="동준">동준:</span>            왜?</div>
+        <div class="dialogue"><span class="character-name" data-character="예준">예준:</span>            불 좀 끄고 가. 아유, 일어나기가 왜 이렇게 귀찮니. 서른 넘으니까 오만게 다 귀찮다 야.</div>
+        
+        <div class="narration">동준, 열 받지만 크게 한숨을 내쉬고 불을 끄고 나간다. 문은 살짝 열어놓은 채.</div>
+        
+        <div class="dialogue"><span class="character-name" data-character="예준">예준:</span>            야! 문 똑바로 안 닫아! 야!</div>
+    
+        
+        <div id="scene3" class="scene-number">#3. 저녁. 동준의 방. </div>
+        <div class="narration">예준의 고함을 뒤로하고 자신의 방으로 들어와 문을 닫는 동준. 침대 옆 벽에 길게 기대어 앉아 생각에 잠긴다. </div>
+        
+        <div id="scene4" class="scene-number">#4. 낮. 예준의 방. 동준의 회상.</div>
+        <div class="narration">양아치 끼가 물씬 나는 중학생 동준. 거실에 가방을 대충 던져놓고 문이 열려있는 예준의 방으로 들어간다. 아무도 없는 걸 알지만, 그래도 주위를 살피고 
+        살금살금 들어가 예준의 화장대에 놓인 담배를 집어 한 개비를 조심스럽게 꺼내고 최대한 원래 있던 모습과 똑같이 내려놓고, 살금살금 방을 나간다. </div>
+        
+        <div id="scene5" class="scene-number">#5. 저녁. 동준의 방. 동준의 회상.</div>
+        <div class="narration"> 침대에 걸터누워 핸드폰 보고있는 중학생 동준. 예준이 벌컥, 문을 열고 들어온다.</div>
+        
+        <div class="dialogue"><span class="character-name" data-character="예준">예준:</span>            야, 하동준! 니가 내 담배 건드렸냐?</div>
+    
+        <div class="narration"> 동준, 당황하지만 티대지 않으려 노력한다.</div>
+        
+        <div class="dialogue"><span class="character-name" data-character="동준">동준:</span>            뭐? 아니거든?</div>
+        <div class="dialogue"><span class="character-name" data-character="예준">예준:</span>            아니긴 뭐가 아니야, 내가 개수 다 세놨는데! 뒤질래? 내가 내꺼 훔쳐 피지 말랬지!</div>
+        <div class="dialogue"><span class="character-name" data-character="동준">동준:</span>            ... 보통은 피지 말라고 하지 않냐?</div>
+        <div class="dialogue"><span class="character-name" data-character="예준">예준:</span>            피든가 말든가, 내 알바 아니고, 내꺼 훔쳐 피거나, 학교에서 피다 걸려서 나 학교 불려가게 하면 뒤진다고 했냐, 안 했냐. 죽을래?</div>
+        <div class="dialogue"><span class="character-name" data-character="동준">동준:</span>            아, 알았다고, 이 꼴초 아줌마야.</div>
+        <div class="dialogue"><span class="character-name" data-character="예준">예준:</span>            이게 진짜 죽을라고.</div>
+    
+        <div class="narration">살벌한 표정으로 동준에게 달려드는 예준. 동준을 덮쳐 마구 간지럽힌다. 동준은 아직 성장기가 오지 않아 예준에게 덩치와 힘, 모두 밀려 속수무책으로 
+        당하기만 한다.</div>
+    
+        <div class="dialogue"><span class="character-name" data-character="동준">동준:</span>            악! 악! 안 가져갈게! 안 건드린다고!</div>
+        <div class="dialogue"><span class="character-name" data-character="예준">예준:</span>            더 당해봐야 돼, 너는. 오늘 아주, 버르장머리를 고쳐놓을라니까.</div>
+        <div class="dialogue"><span class="character-name" data-character="동준">동준:</span>            안 건드릴게! 진짜 안 건드릴게! 악!</div>
+    
+        <div class="narration">동준의 항복선언 후에도 한참을 더 간지럽히던 예준. 동준의 숨이 거의 넘어가려 하자 그제야 일어나 동준을 내려다본다. </div>
+        
+        <div class="dialogue"><span class="character-name" data-character="예준">예준:</span>            한 번만 더 건드리면, 이 정도로 안 끝나. 알지?</div>
+    
+        <div class="narration">무력하게 고개만 끄덕이는 동준.</div>
+        
+        <div id="scene6" class="scene-number">#6. 저녁. 동준의 방.</div>
+        <div class="narration">회상을 마친 동준. 나직하게 혼잣말을 내 뱉는다.</div>
+        
+        <div class="dialogue"><span class="character-name" data-character="동준">동준:</span>            저게 담배를 끊었다고...</div>
+    
+        <div class="narration">닫힌 방문을 바라보며 고개를 갸웃대는 동준. 아무리 생각해도 이해가 안 되는 듯, 다시 혼잣말을 내 뱉는다.</div>
+    
+        <div class="dialogue"><span class="character-name" data-character="동준">동준:</span>            끊은 건 맞는 것 같은데...</div>
+    
+        <div class="narration">말 끝을 흐리다가 번득, 무언가 떠오른 동준. 급하게 자리에서 일어나 문을 열고 밖으로 나간다.</div>
+        
+        <div id="scene7" class="scene-number">#7. 저녁. 예준의 방.</div>
+        <div class="narration">벌컥. 문을 열고 들어오는 동준 때문에 놀란 예준. 높게 들고 있던 핸드폰을 얼굴에 떨어트린다.</div>
+    
+        <div class="dialogue"><span class="character-name" data-character="예준">예준:</span>            악! ... 아... 뭐야, 뒤질래, 진짜? 노크 안 해?</div>
+    
+        <div class="narration">동준, 딱히 신경 쓰지 않고 덤덤한 목소리로 예준에게 묻는다.</div>
+        
+        <div class="dialogue"><span class="character-name" data-character="동준">동준:</span>            야, 너 남자친구한테 맞고 사냐?</div>
+        <div class="dialogue"><span class="character-name" data-character="예준">예준:</span>            (귀찮은 듯 동준을 쳐다보지도 않고) 아까 아니라고 했다.</div>
+        <div class="dialogue"><span class="character-name" data-character="동준">동준:</span>            아, 그랬지. ... 진짜 아니야?</div>
+        <div class="dialogue"><span class="character-name" data-character="예준">예준:</span>            아니라고.</div>
+        <div class="dialogue"><span class="character-name" data-character="동준">동준:</span>            하긴, 니가 맞고 가만있을 성격은 아니지.</div>
+        <div class="dialogue"><span class="character-name" data-character="예준">예준:</span>            알았으면 문 닫고 나가 새꺄. </div>
+    
+        <div class="narration">동준, 문을 닫고 나갔다가, 다시 잽싸게 문을 열고 손만 집어넣어 불을 켠 후에 문을 닫고 도망친다.</div>
+        
+        <div class="dialogue"><span class="character-name" data-character="예준">예준:</span>            아나... 저 새끼가 진짜...</div>
+    
+        <div class="narration">다시 동준을 부르기도 귀찮은지, 자리에서 일어나 불을 끄는 예준.</div>
+        
+        <div id="scene8" class="scene-number">#8. 낮. 학교. 2학년 2반 교실.</div>
+        <div class="narration">학교폭력 예방 교육 중인 교실. 동준은 지루한 듯 펜을 딱, 딱 튀기며 창 밖을 쳐다보는데, 시청각 자료의 대사가 귀에 꽂힌다.</div>
+        
+        <div class="dialogue"><span class="character-name">시청각 자료:</span>       지속적인 폭행 대상자는 주변 사람들에게 본인이 폭행당하고 있다는 사실을 숨길 수 있으니, 주변 친구가 폭행당하는 낌새를 느끼면, 지속적이고 유심한 관찰이 필요합니다. </div>
+        
+        <div class="narration">펜을 내려놓고 시청각 자료에 집중하는 동준.</div>
+        
+        <div id="scene9" class="scene-number">#9. 저녁. 동준의 집. 거실.</div>
+        <div class="narration">심각한 표정으로 들어오는 동준. 가방을 대충 던져놓고 예준의 방으로 들어간다. </div>
+        
+        <div id="scene10" class="scene-number">#10. 저녁. 예준의 방.</div>
+        <div class="narration">문을 열고 들어와 방을 둘러보는 동준. 벽 한켠 옷걸이에 걸려있는 가방들을 뒤지는데, 한 가방에서 소독약과 연고, 밴드가 나온다. 동준, 물건들을 노려보며 
+        이를 악 물고.</div>
+        
+        <div class="dialogue"><span class="character-name" data-character="동준">동준:</span>            이, 개새끼가...</div>
+    
+        <div class="narration"> 그때, 동준의 핸드폰이 울린다. 확인해보니 누나에게 온 카톡이다. </div>
+    
+        <div class="dialogue"><span class="character-name" data-character="예준">예준(메세지)</span>	20분 후에 남자친구랑 같이 갈거니까 집 좀 치워놔. 빨리.</div>
+    
+        <div class="narration">메세지를 확인하고 불타오르는 동준의 눈동자.</div>
+        
+        <div id="scene11" class="scene-number">#11. 저녁. 주방.</div>
+        <div class="narration">이글대는 눈빛으로 주방으로 오는 동준. 주방 이곳저곳을 헤집다가 싱크대 아래 수납장을 열고 칼통에서 식칼 하나를 꺼내 섬뜩한 눈빛으로 바라보며 상상에 빠진다.</div>
+        
+        <div id="scene12" class="scene-number">#12. 저녁. 동준의 상상. </div>
+        <div class="narration">예준과 우락부락, 깡패처럼 험악한 인상을 가진 예준의 남자친구가 현관문을 열고 들어오자, 동준은 남자친구의 목에 식칼을 가져다 대고 나직한 목소리로 말한다.</div>
+        
+        <div class="dialogue"><span class="character-name" data-character="동준">동준:</span>            꺼져.</div>
+    
+        <div class="narration">그러나 험악한 인상답게, 예준의 남자친구는 칼을 쥔 동준의 손을 단숨에 제압하고 오히려 동준에게 주먹을 날려 쓰러트린다.</div>
+        
+        <div id="scene13" class="scene-number">#13. 저녁. 주방. </div>
+        <div class="narration">고개를 젓는 동준. 칼을 집어넣은 후 싱크대 수납장을 뒤지다가 바닥이 프라이팬 하나를 꺼내 들고, 바닥이 충분히 두꺼운지 확인하려는 듯 바닥을 두드려본다.
+        묵직한 소리가 들려오고, 동준은 다시 상상에 잠긴다. </div>
+        
+        <div id="scene14" class="scene-number">#14. 저녁. 동준의 상상.</div>
+        <div class="narration"> 식탁에 마주 앉은 예준, 동준, 여전히 깡패 같은 예준의 남자친구. 동준은 의자 밑에 숨겨놓은 프라이팬을 꺼내 들어 남자친구의 머리를 세게 후려친다. </div>
+        
+        <div class="dialogue"><span class="character-name" data-character="동준">동준:</span>            이 개새끼가!</div>
+    
+        <div class="narration">머리를 부여잡은 남자친구의 위에 올라타 미친 사람처럼 프라이팬을 내리치는 동준.</div>
+    
+        <div class="dialogue"><span class="character-name" data-character="동준">동준:</span>            죽어, 죽어, 죽어!</div>
+    
+        <div class="narration">뒤에서 예준이 비명을 지르며 동준을 뜯어 말린다. 머리에서 피를 흘리며 경련하는 예준의 남자친구. 동준은 미친 사람처럼 얼굴에 묻은 피를 손으로 문질러
+        피 범벅을 만들다가..</div>
+        
+        <div id="scene15" class="scene-number">#15. 저녁. 주방.</div>
+        <div class="narration">다시 고개를 젓는 동준. 문득 핸드폰을 꺼내 사진첩을 뒤진다. 꽤 오래된 예전 사진을 찾아내 살펴본다. 예준이 동준의 상상 속 예준의 남자친구와 비슷하게 
+        생긴 남자와 다정하게 붙어 있는 사진. 동준이 찍어준 듯 하다. 다시 상상에 빠지는 동준.</div>
+        
+        <div id="scene16" class="scene-number">#16. 저녁. 동준의 상상.</div>
+        <div class="narration">식탁에 모여 앉은 셋. 동준이 말한다.</div>
+        
+        <div class="dialogue"><span class="character-name" data-character="동준">동준:</span>            우리 누나, 다른 사람 만나고 있는 거 알아요?</div>
+        <div class="dialogue"><span class="character-name" data-character="예준">예준:</span>            뭐? 무슨 소리 하는 거야? </div>
+        <div class="dialogue"><span class="character-name" data-character="남자친구">남자친구:</span>         뭐? 그게 무슨 소리야?</div>
+    
+        <div class="narration">동준은 핸드폰을 꺼내 사진을 보여주며 말한다. </div>
+        
+        <div class="dialogue"><span class="character-name" data-character="동준">동준:</span>            봐요. 옆에 이 사람. 전에 만나던 사람인데, 못 잊고 다시 만나는 모양이더라고. 누나가 얘기 안 해요?</div>
+        <div class="narration">충격에 빠져 사진을 자세히 들여다보는 예준과 남자친구. </div>
+        
+        <div class="dialogue"><span class="character-name" data-character="예준">예준:</span>            ...미친놈이. 이게 몇 년 전 사진인데, 이걸 아직도 갖고 있어?</div>
+        <div class="dialogue"><span class="character-name" data-character="남자친구">남자친구:</span>            그러게. 이땐 완전 단발이었는데?</div>
+    
+        <div class="narration">단발이라는 말에 급하게 사진을 확인하는 동준. 고개를 들어 예준의 머리를 보면, 어깨를 한참 넘어가는 긴 머리다. 낭패라는 듯, 머리를 쥐어뜯는 동준.</div>
+        
+        <div id="scene17" class="scene-number">#17. 저녁. 동준의 집. 주방.</div>
+        <div class="narration"> 머리를 부여잡는 동준. 다른 방법이 없을까 미친 듯이 고개를 돌리며 주방을 살피는데, 현관 도어록을 여는 소리가 들린다. </div>
+        
+        <div class="dialogue"><span class="character-name" data-character="동준">동준:</span>            이, 씨.. 왜 이렇게 빨리 왔어.</div>
+        <div class="narration">우왕좌왕하다가 식탁에 올려진 프라이팬을 발견한 동준. 급하게 의자 밑에 숨겨놓고, 현관으로 달려간다. </div>
+        
+        <div id="scene18" class="scene-number">#18. 저녁. 동준의 집. 현관 앞.</div>
+        <div class="narration">현관 앞에 선 동준. 살기등등한 표정으로 현관문을 노려보는데... 찰싹 붙어 문을 열고 들어오는 예준과 멀끔하게 생긴 남자친구. 서로를 마주 보며 웃는 두 사람이 
+        동준에게 느리게 보인다. 충격을 받았는지 멍하게 서 있는 동준. </div>
+        
+        <div class="dialogue"><span class="character-name" data-character="예준">예준:</span>            뭐 하냐, 여기서? 인사 안 해?</div>
+        <div class="dialogue"><span class="character-name" data-character="매형">매형:</span>            아, 여기가 동준이?</div>
+    
+        <div class="narration">예준은 환하게 웃으며 고개를 끄덕이고, 그 모습을 본 매형도 환하게 웃는다. 그리곤 동준에게 예의를 차려 악수를 청하며 인사를 건넨다.</div>
+        
+        <div class="dialogue"><span class="character-name" data-character="매형">매형:</span>            반가워요. 예준이한테 얘기 많이 들었어요. </div>
+        <div class="dialogue"><span class="character-name" data-character="동준">동준:</span>            (얼떨결에 내민 손을 잡으며) 아, 네...</div>
+        <div class="dialogue"><span class="character-name" data-character="매형">매형:</span>            근데, 자기가 말한 것만큼 무섭게 생기진 않았는데...?</div>
+        <div class="dialogue"><span class="character-name" data-character="예준">예준:</span>            아니긴 뭘 아니야. 눈이 부리부리- 해가지고. 밤에 마주치면 깜짝깜짝 놀란다니까. 장승인 줄 알고.</div>
+        <div class="dialogue"><span class="character-name" data-character="매형">매형:</span>            에이. 잘 생겼구만. 뭘. 자기랑 똑같이 생겼어.</div>
+        <div class="dialogue"><span class="character-name" data-character="예준">예준:</span>            죽을래! </div>
+    
+        <div class="narration">티격대며 안으로 들어오는 둘은, 서로를 진심으로 사랑하는 커플의 모습이다. 멍하게 서 있다가 정신을 차렸는지, 90도로 공손하게 인사하는 동준.</div>
+        
+        <div class="dialogue"><span class="character-name" data-character="동준">동준:</span>            안녕하세요! 처음 뵙겠습니다, 매형!</div>
+    
+        <div class="narration">갑작스런 동준의 인사에 둘은 깔깔대며 웃는다. </div>
+        
+        <div class="dialogue"><span class="character-name" data-character="예준">예준:</span>            꺄하하! 매형이래! </div>
+        <div class="dialogue"><span class="character-name" data-character="매형">매형:</span>            어! 그래, 처남! 앞으로 잘 지내보자고! </div>
+        <div class="dialogue"><span class="character-name" data-character="동준">동준:</span>            네! 매형! 들어가시죠!</div>
+    
+        <div class="narration">세 사람은 왁자지껄 웃으며 식탁으로 가고, 그런 셋의 뒷모습을 따라가다가 거실을 보면 동준의 가족사진 두 개가 보인다. 주방에선 식탁 의자를 끌다가 프라이팬을 
+        건드린 듯 요란한 소리와 세 사람의 말소리가 들려온다.</div>
+        
+        <div class="dialogue"><span class="character-name" data-character="예준">예준:</span>            야, 뭐냐 이게? 프라이팬이 왜 바닥에 있어?</div>
+        <div class="dialogue"><span class="character-name" data-character="동준">동준:</span>            아! 내가 그걸로 뭣 좀 하려다가.</div>
+        <div class="dialogue"><span class="character-name" data-character="예준">예준:</span>            계란 후라이도 맨날 태워 먹는 게 무슨. 이걸로 도둑 잡게?</div>
+        <div class="dialogue"><span class="character-name" data-character="동준">동준:</span>            아냐, 도둑은...</div>
+
+
+        <div class="narration">
+        필사적으로 말을 돌리는 동준의 목소리에서.</div>
+    
+        <div id = "fin" class="scene-number">fin.          </div>
+        
+    </p>
+    <script>
+      // 인물별 색상 맵
+      const characterColors = {
+        "동준": "highlight-dongjun",
+        "예준": "highlight-yejun",
+        "남자친구": "highlight-boyfriend",
+        "매형": "highlight-husband",
+      };
+  
+      // 인물 이름 클릭 이벤트 설정
+      document.querySelectorAll('.character-name').forEach(nameElement => {
+        nameElement.addEventListener('click', () => {
+          const character = nameElement.dataset.character; // 클릭한 인물의 이름
+          const highlightClass = characterColors[character]; // 해당 인물의 강조 클래스
+  
+          // 모든 대사에서 강조 제거
+          document.querySelectorAll('.dialogue').forEach(dialogue => {
+            dialogue.classList.remove(...Object.values(characterColors)); // 모든 강조 클래스 제거
+          });
+  
+          // 해당 인물의 대사 강조
+          document.querySelectorAll(`.character-name[data-character="${character}"]`).forEach(element => {
+            element.parentElement.classList.add(highlightClass); // 해당 대사의 부모 요소 강조
+          });
+        });
+      });
+    </script>
+
+    <a href="index.html">← 책장으로 돌아가기</a>
+
+<!-- "맨 위로" 버튼 -->
+<button id="backToTop">▲ 위로</button>
+
+<script>
+  // "맨 위로" 버튼 가져오기
+  const backToTopButton = document.getElementById("backToTop");
+
+  // 스크롤 이벤트 리스너
+  window.addEventListener("scroll", () => {
+    // 페이지 스크롤 위치가 300px 이상이면 버튼 표시
+    if (window.scrollY > 300) {
+      backToTopButton.style.display = "block";
+    } else {
+      backToTopButton.style.display = "none";
+    }
+  });
+
+  // 버튼 클릭 이벤트 리스너
+  backToTopButton.addEventListener("click", () => {
+    // 페이지를 맨 위로 부드럽게 스크롤
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  });
+</script>
+
+</body>
+</html>
+

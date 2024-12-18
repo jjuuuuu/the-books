@@ -1,0 +1,54 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+.bookshelf {
+    position: relative;
+    width: 100%;
+    padding: 20px;
+    background-image: url('shelf.jpg'); /* 책장 이미지 */
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.book {
+    position: relative;
+    z-index: 1;
+    width: 120px;
+    height: 200px;
+    margin: 10px;
+    background-color: #fff;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    overflow: hidden;
+    text-align: center;
+}
+
+.book img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    transition: transform 0.2s;
+}
+
+.book img:hover {
+    transform: scale(1.1); /* 마우스 올렸을 때 확대 */
+}
+
+.highlight {
+    position: relative;
+    display: inline-block;
+    padding: 0 5px;
+    transition: background-color 0.3s ease;
+}
+
+.highlight:hover {
+    background-color: #f0c040; /* 배경색을 바꾸어서 강조 */
+    color: white; /* 글자 색 변경 */
+}
