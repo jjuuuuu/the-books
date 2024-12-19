@@ -3,335 +3,403 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>책 2</title>
+    <link rel="stylesheet" href="styles.css">
+
+    <title>책 1</title>
     <style>
-
-    /* 블록 처리할 단어 스타일 */
-    .highlight {
-    position: relative;
-    display: inline-block;
-    padding: 0 1px;
-    transition: background-color 0.3s ease;
-    }
-          /* 마우스 오버 시 블록 효과 */
-    .highlight:hover {
-      background-color: #f0c040; /* 배경색을 바꾸어서 강조 */
-      color: white; /* 글자 색 변경 */
+ /* 기본 스타일 */
+ body {
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+      margin: 20px;
     }
 
-    .selected {
-      background-color: #f0c040; /* 선택된 단어에 배경색 적용 */
+
+
+    
+
+    /* 각 인물별 강조 스타일 */
+    .highlight-juyoung {
+      display: inline-block;
+      background-color: #f3e881;
+      color: #000;
+    }
+
+    .highlight-jungnam {
+      display: inline-block;
+      background-color: #90caf9;
+      color: #000;
+    }
+
+    .highlight-boyfriend {
+      display: inline-block;
+      background-color: #f990e7;
+      color: #000;
+    }
+
+    .highlight-husband {
+      display: inline-block;
+      background-color: #90f9aa;
+      color: #000;
+    }
+
+    .highlight-police {
+      display: inline-block;
+      background-color: #90f9aa;
+      color: #000;
+    }
+
+
+
+    #backToTop {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background-color: #69aef8;
       color: white;
+      border: none;
+      border-radius: 5px;
+      padding: 10px 15px;
+      font-size: 14px;
+      cursor: pointer;
+      display: none; /* 초기 상태에서 숨김 */
+      box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
     }
 
-        body {
-            font-family: Arial, sans-serif;
-            margin: 20px;
-            line-height: 1.6;
-        }
-        a {
-            text-decoration: none;
-            color: blue;
-        }
+    #backToTop:hover {
+      background-color: #0056b3;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+
     </style>
 </head>
 <body>
-    <h1>책 1의 내용</h1>
-    <p>아버지
-        <pre>
-        #1. 저녁. 동준과 예준의 집. 
-        어느 가을 늦은 저녁. 아무도 없지만 불이 켜진 작은 거실. 벽 한쪽으로 오래된 소파가 놓여있고 건너편으로 집과 어울리지 않는 최신형 TV가 서 있다. 
-        그 위쪽으론 커다란 가족사진 두 개가 걸려있다. 한 사진엔 부부와, 다소 양아치 티가 나는 교복을 입은 딸과, 치켜 올라간 눈매를 가진 초등학교 저학년생
-        아들이 모여있고, 다른 사진엔 초등학교 졸업식 사진인지, 꽃다발을 든 다소 우울한 표정의 아들과 몇 년이 지나 정신을 차린 듯 단정하게 차려입고 밝은 
-        표정을 짓는 딸의 모습이 담겨있다. 다른 곳도 둘러보면 이곳은 오래된 빌라처럼 보인다. 군데군데 낡은 흔적이 남아있지만, 그 이상으로 넘치는 발랄한 
-        생활감은 이곳이 따듯하고 정감가는 집임을 알 수 있게 해 준다. 그때 한쪽 방문을 벌컥 열고 덩치 큰 고등학생, 동준이 자신의 방을 나와 성큼성큼 거실을 
-        가로질러 건너편 문을 향해 간다.
-        
-        #2. 저녁. 예준의 방
-        침대에 누워 핸드폰으로 철 지난 예능을 보며 낄낄대는 예준. 하루 일과를 마무리하는 듯 편한 차림에 머리를 틀어 올려 묶은 상태. 동준이 문을 벌컥 열고 
-        상체만 들이민 채 퉁명스러운 목소리로 예준에게 묻는다.
-        
-        <div class="dialogue"><span class="character-name">동준:</span>            담배 있냐?</div>
-        <div class="dialogue"><span class="character-name">예준:</span>            있냐? 내가 니 친구냐?</div>
-        <div class="dialogue"><span class="character-name">동준:</span>            아, 있냐고.</div>
-        
-        
-        예준은 보던 영상을 잠시 멈춰놓고, 몸을 일으켜 앉은 후 동준에게 말한다.
-        
-        
-        <div class="dialogue"><span class="character-name">예준:</span>             하, 이 새끼. 입혀주고, 멕여주고, 재워줬더니 이제 누나한테 담배도 뺏어 갈라고 하네. 야 고딩. 교칙 안 봐? 학주쌤이 담배 피지 말라고 안 해?</div>
-        <div class="dialogue"><span class="character-name">동준:</span>             내가 담배를 누구한테 배웠는데.</div>
-        <div class="dialogue"><span class="character-name">예준:</span>             내가 가르쳤냐? 내 책상에 있던 거 지가 몰래 빼서 폈으면서. </div>
-        <div class="dialogue"><span class="character-name">동준:</span>             아, 됐고. 담배 없냐고.</div>
-    
-        
-        예준, 귀찮다는 듯 다시 자리에 누워 영상을 튼다.
-        
-        
-        <div class="dialogue"><span class="character-name">예준:</span>            없어. 끊었어.</div>
-        <div class="dialogue"><span class="character-name">동준:</span>            개가 똥을 끊지. 니가 담배를 끊었다고?</div>
-        <div class="dialogue"><span class="character-name">예준:</span>            어. 자꾸 담배 얘기하지마, 담배 땡기니까.</div>
-        <div class="dialogue"><span class="character-name">동준:</span>            ... 진짜 끊었어?</div>
-        <div class="dialogue"><span class="character-name">예준:</span>            어! 좀 나가. 나 무도 봐야 돼.</div>
-    
-        동준, 진심으로 의외라는 듯, 동그란 눈으로 묻는다.
-        
-        <div class="dialogue"><span class="character-name">동준:</span>            왜?</div>
-        <div class="dialogue"><span class="character-name">예준:</span>            남자친구 때문에.</div>
-        <div class="dialogue"><span class="character-name">동준:</span>            왜? 담배 피는 여자는 싫대?</div>
-        <div class="dialogue"><span class="character-name">예준:</span>            아니.</div>
-        <div class="dialogue"><span class="character-name">동준:</span>            근데 왜?</div>
-        <div class="dialogue"><span class="character-name">예준:</span>            그냥.</div>
-        <div class="dialogue"><span class="character-name">동준:</span>            그냥? 니가 그냥 담배를 끊었다고? ... 니가?</div>
-        <div class="dialogue"><span class="character-name">예준:</span>            아, 좀 나가! </div>
-    
-        예준의 짜증에 동준은 문을 닫고 나간다. 그러나, 잠시 후 다시 벌컥 문을 열어 고개만 들이밀고 예준에게 묻는다.
-        
-        <div class="dialogue"><span class="character-name">동준:</span>            너 그 새끼한테 맞고 다니냐?</div>
-        <div class="dialogue"><span class="character-name">예준:</span>            뭐? 뭔 개소리야. 안 나가? 공부 안 해?</div>
-        
-        공부 얘기에 냉큼 예준에게 가운뎃손가락 날리고 문 닫고 나가는 동준.
-        
-        <div class="dialogue"><span class="character-name">예준:</span>            저 새끼가... 야! 하동준! 일로 와! ... 안 와? 하나. 둘. 셋!</div>
-    
 
-        동준은 귀찮은 표정으로 문을 연다.
-    
-        <div class="dialogue"><span class="character-name">동준:</span>            왜?</div>
-        <div class="dialogue"><span class="character-name">예준:</span>            불 좀 끄고 가. 아유, 일어나기가 왜 이렇게 귀찮니. 서른 넘으니까 오만게 다 귀찮다 야.</div>
+  <a href="index.html">← 책장으로 돌아가기</a>
+
+<!-- /*필요한 것들.  -->
+<!-- // <div id="scene1" class="scene-number"></div> //목차용 씬넘버. -->
+<!-- // <div class="dialogue"><span class="character-name" data-character="동준">동준:</span>       </div> //대사용. -->
+<!-- // <div class="narration"></div> // 지문용. */ -->
+
+
+
+
+  <h1>목차</h1>
+  <ul class="table-of-contents">
+    <li><a href="#scene1">#1</a></li>
+    <li><a href="#scene2">#2</a></li>
+    <li><a href="#scene3">#3</a></li>
+    <li><a href="#scene4">#4</a></li>
+    <li><a href="#scene5">#5</a></li>
+    <li><a href="#scene6">#6</a></li>
+    <li><a href="#scene7">#7</a></li>
+    <li><a href="#scene8">#8</a></li>
+    <li><a href="#scene9">#9</a></li>
+    <li><a href="#scene10">#10</a></li>
+    <li><a href="#scene11">#11</a></li>
+    <li><a href="#scene12">#12</a></li>
+    <li><a href="#scene13">#13</a></li>
+    <li><a href="#fin">fin</a></li>
+  </ul>
+     
+
+
+
+  
+    <h1>운전연수</h1> 
+    <p>
+<div id="scene1" class="scene-number"> #1. 낮. 아파트 단지. 지상 주차장. </div>
+<div class="narration">상기된 표정으로 아파트 중앙현관을 나서는 딸과 그와 상반되게 긴장한 채 뒤를 따르는 아버지. 현관에서 멀지 않은 곳에 세워놓은 차를 향해 간다. 딸은 차를 향해 가며 스마트키로 차의 잠금을 풀고, 아버지는 주차장 가운데에 잠시 멈춰서서 301동 1203호, 자신의 집을 올려다보는데, 딸이 자신을 재촉하는 소리가 들린다.</div>
+
+<div class="dialogue"><span class="character-name" data-character="딸">딸:</span>  빨리 와! 뭐 해 거기서?</div>
+<div class="dialogue"><span class="character-name" data-character="아버지">아버지:</span>  어! 가, 가.</div>
+
+<div class="narration">마음을 다잡고 차를 향해 가는 아버지. 딸은 운전석 문 앞에 서서 문을 열려 하는데, 열리지 않는다. </div>
+
+<div class="dialogue"><span class="character-name" data-character="딸">딸</span> 	어? 왜 안 열려? 이거 누르면 열리는 거 아닌가?</div>
+
+<div class="narration">스마트키의 한 버튼을 누르는 딸. 위이잉. 소리와 함께 트렁크가 열린다. </div>
+
+<div class="dialogue"><span class="character-name" data-character="딸">딸:</span>  이게 아닌가? 이건가?</div>
+
+<div class="narration">고개를 갸웃거리며 이리저리 키를 만지는 딸의 모습을 보며, 아버지는 걸음을 멈추고, 다시 한번 자신의 집, 301동 1203호를 올려다본다. 그 표정에 후회와 걱정이 가득하다. 딸이 버튼을 잘못 눌렀는지, 크게 경적이 한 번 울리고, 그 소리에 움찔, 놀라는 아버지.</div>
+
+<div id="scene2" class="scene-number">#2. 낮. 아파트 단지 주차장. 차 안.</div>
+<div class="narration">신나서 운전석으로 들어오는 딸. </div>
+
+<div class="dialogue"><span class="character-name" data-character="딸">딸:</span>  와, 무슨 버튼이 이렇게 많아?</div>
+
+<div class="narration">아버지는 무거운 표정으로 조수석에 올라탄다. 아버지가 조수석 문을 닫자, 딸은 곧장 차의 시동을 켠다. 부드러운 엔진음과 함께 차의 시동이 켜지고 계기판이 움직이며 차에 문제가 없음을 나타낸다. </div>
+
+<div class="dialogue"><span class="character-name" data-character="딸">딸:</span>  이야. 역시 아빠 차가 좋긴 좋아. 학원 차는 엄청 시끄럽더라고. 힘도 약한 주제에.</div>
+
+<div class="narration">신이 난 딸은 곧장 후진기어를 넣고 차를 빼려 한다. 아버지가 급하게 이를 제지한다.</div>
+
+<div class="dialogue"><span class="character-name" data-character="아버지">아버지:</span>  야! 야! 스톱!</div>
+
+<div class="narration">급브레이크를 밟아 덜컹이는 차량. 그에 맞춰 아버지와 딸의 머리도 세게 흔들린다. 아버지는 딸을 째려보며 말한다.</div>
+
+<div class="dialogue"><span class="character-name" data-character="아버지">아버지:</span>  ...안전벨트 메야지.</div>
+<div class="dialogue"><span class="character-name" data-character="딸">딸:</span>  아, 맞다. 안전벨트.</div>
+
+<div class="narration">주섬주섬 벨트를 메는 딸. 다시 핸들을 잡고 브레이크에서 발을 떼자 차가 스스륵 움직이는데, 아버지는 다시 딸을 제지한다.</div>
+
+<div class="dialogue"><span class="character-name" data-character="아버지">아버지:</span>  스톱! 스톱!</div>
+
+<div class="narration">다시 한번 덜컹이는 차량. </div>
+
+<div class="dialogue"><span class="character-name" data-character="딸">딸:</span>  왜!</div>
+<div class="dialogue"><span class="character-name" data-character="아버지">아버지:</span>  확인 다 했어? 사이드미러, 룸미러 다 잘 보이는지. 너 다리 길이랑 의자 위치랑 잘 맞는지. 주변에 아무도 없는지! 사이드 브레이크 해제했는지!</div>
+<div class="dialogue"><span class="character-name" data-character="딸">딸:</span>  아, 잠깐만. </div>
+
+<div class="narration">룸미러부터 자신의 시야에 맞추는 딸. 사이드미러를 확인하는데, 접혀있다. 사이드미러를 펴기 위해 도어 트림의 이곳저곳을 만져보는데, 조수석 창문이 내려간다. 딸에게 들리지 않게 작게 한숨을 내쉬는 아버지.</div>
+
+<div class="dialogue"><span class="character-name" data-character="딸">딸:</span>  아, 아. 이거다. </div>
+
+<div class="narration">사이드미러가 펼쳐지고, 다시 차는 후진한다. </div>
+
+<div class="dialogue"><span class="character-name" data-character="딸">딸:</span>  아, 아빠 진짜. 잔소리 좀 하지 마! 운전에 집중이 안 되잖아!</div>
+<div class="dialogue"><span class="character-name" data-character="아버지">아버지:</span>  아니, 네가 확인을...</div>
+
+<div class="narration">자신을 째려보는 딸의 눈빛에, 조용해지는 아버지. 작은 목소리로 웅얼웅얼, 불평한다.</div>
+
+<div class="dialogue"><span class="character-name" data-character="아버지">아버지:</span>  누굴 닮아서...</div>
+
+<div id="scene3" class="scene-number">#3. 낮. 시가지 외곽 도로. 차 안.</div>
+<div class="narration">두 손으로 핸들을 꼭 잡은 채 운전 중인 딸. 아버지는 옆 차 보랴, 차선 보랴, 신호 보랴, 뒤차 보랴 정신없는데, 딸은 신나게 떠든다.</div>
+
+<div class="dialogue"><span class="character-name" data-character="딸">딸:</span>  아니 그래서 그때, 옆에서 차가 끼어들어서 내가 막 욕을 했더니, 강사님이 덩달아 더 욕을 막- 하는 거야. 그래서 둘이 막 핏대를 세우면서 욕을 하는데,</div>
+<div class="dialogue"><span class="character-name" data-character="아버지">아버지:</span>  어, 어. 신호, 신호 바뀐다.</div>
+<div class="dialogue"><span class="character-name" data-character="딸">딸:</span>  어? 어?</div>
+
+<div class="narration">딸은 빨간불로 바뀐 신호를 보지 못하고 그냥 지나친다. 아버지는 불편한 자세로 뒤를 돌아보며 단속 카메라가 있었는지 확인한다.</div>
+
+<div class="dialogue"><span class="character-name" data-character="아버지">아버지:</span>  아이고, 찍혔네. 찍혔어. 벌금 나오겠다.</div>
+<div class="dialogue"><span class="character-name" data-character="딸">딸:</span>  뭐가 찍혀? 신호 위반? 그거 얼마나 나오지?</div>
+<div class="dialogue"><span class="character-name" data-character="아버지">아버지:</span>  한 6만 원?</div>
+<div class="dialogue"><span class="character-name" data-character="딸">딸:</span>  아, 뭐야. 나 알바비 들어온 거 있으니까, 내가 낼게.</div>
+<div class="dialogue"><span class="character-name" data-character="아버지">아버지:</span>  아냐. 아빠가 낼게. 딸 운전 연수하는데, 그 정도는 해 줘야지.</div>
+<div class="dialogue"><span class="character-name" data-character="딸">딸:</span>  아냐, 내가 낼게. 내가 신호 위반한 건데. 내 잘못은 내가 책임져야지.</div>
+<div class="dialogue"><span class="character-name" data-character="아버지">아버지:</span>  하하하! 네가 벌써 뭘 책임질, 그게 되냐? 그 돈은 아꼈다가, 나중에 놀러 갈 때 써. </div>
+<div class="dialogue"><span class="character-name" data-character="딸">딸:</span>  그래! 고마워, 아빠!</div>
+
+<div id="scene4" class="scene-number">#4. 낮. 차 안. 몽타주. 딸의 범칙금 매드무비.</div>
+<div class="narration">
+● 내비게이션에서 어린이 보호구역임을 알리는 안내가 나온다. 딸은 시속 60km/h를 유지한 채, 그대로 지나간다. 내비게이션 경고음이 계속해서 울린다.</div>
+<div class="narration">
+● 차선을 바꾸려는지, 우측 방향지시등을 켜는 딸. 그런데, 방향지시등을 켜자마자 오른쪽으로 급격하게 방향을 틀어버리고, 갑작스러운 방향전환에 둘의 몸이 크게 쏠린다. 뒤차는 크고 길게 경적을 울린다. 놀란 눈으로 딸을 보는 아버지.</div>
+<div class="narration">
+● 뒤차가 속도를 올려 부녀의 차 앞으로 끼어든다. 딸은 분노에 찬 표정으로 앞차가 된 뒤차를 노려보더니, 차선을 바꾸며 속도를 올리고 앞차의 빈 공간에 거칠게 끼어든다. 사색이 되어가는 아버지의 표정.</div>
+<div class="narration">
+● 내비게이션에서 잠시 후 유턴을 해야 한다는 안내가 나온다. </div>
+
+<div class="dialogue"><span class="character-name" data-character="딸">딸:</span>  유턴?</div>
+
+<div class="narration">곧장 핸들을 꺾어버리는 딸. 급격한 관성에 한쪽으로 몸이 쏠리는 두 사람. 당황한 딸은 급하게 브레이크를 밟고, 그 탓에 두 사람의 머리는 다시 크게 흔들리며, 아버지의 얼굴이 유리창에 세게 찌부러진다. 중앙선 가운데 가로로 걸쳐서 멈춰있는 차. 지나가던 다른 차들이 크게 경적을 울리고, 멀리 서 있던 순찰차가 사이렌을 울리며 다가온다.</div>
+
+<div class="dialogue"><span class="character-name" data-character="순찰차">순찰차:</span>  	중앙선에 멈춰있는 8467차량, 그대로 멈춰 서세요.</div>
+
+<div class="narration">힘이 빠져 의자에 기댄 채 한숨을 쉬는, 한쪽 볼이 빨개진 아버지와, 핸들에 머리를 박고 있는 딸.</div>
+
+<div id="scene5" class="scene-number">#5. 낮. 시가지 외곽 도로. 차 안.</div>
+
+<div class="dialogue"><span class="character-name" data-character="아버지">아버지:</span>  네, 수고 하십쇼! 충성!</div>
+
+<div class="narration">돌아서는 경찰을 향해 아버지가 애써 넉살 좋게 인사를 보낸다. 딸은 의기소침, 두 손을 공손하게 모으고 앉아있다. 창문이 다 올라가고 경찰이 시야에서 멀어지자, 아버지는 다시 의자에 푹, 몸을 기대앉으며 딸에게 말한다.</div>
+
+<div class="dialogue"><span class="character-name" data-character="아버지">아버지:</span>  벌금, 네 돈으로 내라.</div>
+<div class="dialogue"><span class="character-name" data-character="딸">딸:</span>  ... 응.</div>
+<div class="dialogue"><span class="character-name" data-character="아버지">아버지:</span>  가자...</div>
+
+<div class="narration">비실비실, 다시 출발하는 차.</div>
+
+<div id="scene6" class="scene-number">#6. 낮. 나들목 근처. 차 안.</div>
+<div class="narration">신호도, 교차로도 없는 곳에서 평온하게 주행 중인 차량. 내비게이션 안내음이 나온다.</div>
+
+<div class="dialogue"><span class="character-name" data-character="내비게이션">내비게이션:</span>  잠시 후, 00 IC 방면, 우측 차선입니다.</div> 
+
+<div class="narration">안내를 들으며 부드럽게 차선을 바꾸는 딸. 뒤에 따라오는 차가 없는지 확인하던 아버지가 말한다.</div>
+
+<div class="dialogue"><span class="character-name" data-character="딸">딸:</span>  아빠, 큰일 났어.</div>
+<div class="dialogue"><span class="character-name" data-character="아버지">아버지:</span>  (긴장하며) 어? 왜?</div>
+<div class="dialogue"><span class="character-name" data-character="딸">딸:</span>  나 쉬 마려.</div>
+<div class="dialogue"><span class="character-name" data-character="아버지">아버지:</span>  (긴장 풀려 허탈하게) 다 큰 애가, 말을.. 화장실 가고 싶어. 하면 되지.</div>
+<div class="dialogue"><span class="character-name" data-character="딸">딸:</span>  에이, 그거나 그거나. 암튼, 다음에 휴게소 나오면 들어갈게?</div>
+<div class="dialogue"><span class="character-name" data-character="아버지">아버지:</span>  그래.</div>
+
+ <div class="narration">램프 구간으로 진입하는 차량.</div>
+
+
+<div id="scene7" class="scene-number">#7. 낮. 고속도로. 차 안.</div>
+<div class="narration">2차로로 주행 중인 딸. 앞차와 거리가 제법 가까운데, 딸은 답답한지, 고개를 틀어 앞을 내다보다가, 방향 지시등을 켜고 왼쪽 1차로로 차선을 옮긴 후, 속력을 올린다. 110...120...130... 점점 올라가는 속도. 이에 아버지는 불안한지, 안전 손잡이를 꼭, 잡는다. 속도는 하늘 높은 줄 모르고 치솟는데, 내비게이션에서 안내가 나온다.</div>
+
+<div class="dialogue"><span class="character-name" data-character="내비게이션">내비게이션:</span>  2Km 앞, 휴게소가 있습니다. </div>
+<div class="dialogue"><span class="character-name" data-character="딸">딸:</span>  2Km? 그럼 얼마나 가야 되지?</div>
+<div class="dialogue"><span class="character-name" data-character="아버지">아버지:</span>  급해?</div>
+<div class="dialogue"><span class="character-name" data-character="딸">딸:</span>  어.</div>
+<div class="dialogue"><span class="character-name" data-character="아버지">아버지:</span>  2Km면 금방 가지. 차선 바꿔. 속도 좀 줄이..!</div>
+
+<div class="narration">뒷말은 못 들었는지, 아버지의 말이 끝나기도 전에 속도 유지한 채 차선을 바꾸는 딸. 4차선 고속도로에, 140Km/h 짜리 대각선이 그려진다. 급하게 딸의 표정을 살피는 아버지. 딸은 다른 건 눈에 들어오지도 않는지, 오로지 휴게소 입구만 바라보고 달린다. 그 모습에, 아버지는 천천히 눈을 감는다.</div>
+
+<div id="scene8" class="scene-number">#8. 낮. 휴게소. 차 안.</div>
+<div class="narration">초췌한 표정으로 주차 중인 아버지. 한숨 돌린 후 시동을 끄고 차에서 내려 몸을 쭉 펴는데, 딸이 개운한 표정으로 양손에 커피를 들고 다가오며 아버지를 향해 손을 높이 든다. 아버지는 그 모습에, 미소가 나오려는데.</div>
+
+<div class="dialogue"><span class="character-name" data-character="딸">딸:</span>  아빠! 차 대놨네!</div>
+<div class="dialogue"><span class="character-name" data-character="아버지">아버지:</span>  어, 어. 대 놔야지.</div>
+<div class="dialogue"><span class="character-name" data-character="딸">딸:</span>  그냥 두지! 금방 나갈 건데, 또 빼려면 귀찮잖아!</div>
+
+<div class="narration">딸의 순진무구한 말에 굳는 아버지. 도망치듯 운전석 문을 열고, 다시 운전석에 앉으려 하는데.</div>
+
+<div class="dialogue"><span class="character-name" data-character="딸">딸:</span>  왜? 내가 할게. 아빠 편하게 가!</div>
+<div class="dialogue"><span class="character-name" data-character="아버지">아버지:</span>  아, 아냐! 너 처음 운전하는 거라 피곤할 텐데, 나머지는 아빠가..</div>
+<div class="dialogue"><span class="character-name" data-character="딸">딸:</span>  에이, 아냐! 나도 효도 좀 하자! 아빠 편하게 가!</div>
+
+<div class="narration">막무가내로 아버지를 밀어내는 딸. 아득해지는 아버지의 표정.</div>
+
+<div id="scene9" class="scene-number">#9. 해 질 녘. 호숫가. 주차장.</div>
+<div class="narration">널널한 주차장으로 들어오는 차량. 차는 빈자리 앞으로 가 멈춰서고, 그 자리에 후면주차를 하려는 듯 이리저리, 불안하게 앞뒤로 왔다갔다 하더니, 포기했는지 시동을 끄고, 딸과 아버지는 차에서 내린다. 시원하게 몸을 푸는 딸과 달리, 아버지는, 그럴 기력도 없이 그저 살아있다는 것에 감사하며, 안도의 한숨을 내쉰다. </div>
+
+<div class="dialogue"><span class="character-name" data-character="딸">딸:</span>  아유, 증말! 주차할 수 있다니까! ... 시간은 좀 걸리겠지만.</div>
+<div class="dialogue"><span class="character-name" data-character="아버지">아버지:</span>  ... 알지. 아빠 배고파서 그래. 얼른 보고, 밥 먹으러 가자.</div> 
+<div class="dialogue"><span class="character-name" data-character="딸">딸:</span>  그래! 여기 진짜 오랜만에 온다!</div>
+
+<div class="narration">딸은 비실대는 아버지에게 팔짱을 끼고, 연행하듯 호숫가로 데려간다. 나란히 서서 석양을 보는 두 사람의 뒷모습.</div>
+
+<div class="dialogue"><span class="character-name" data-character="딸">딸:</span>  와... 좋다. 면허 따길 잘했네.</div>
+<div class="dialogue"><span class="character-name" data-character="아버지">아버지:</span>  ... 앞으로 차 사면, 친구들이랑, 남자친구 생기면 남자친구랑, 이렇게 놀러 다녀.</div>
+<div class="dialogue"><span class="character-name" data-character="딸">딸:</span>  그래야겠다. 그전까진 아빠 차로 연습 좀 할게!</div>
+
+<div class="narration">대답하지 않고, 멀리 석양을 향해 고개를 돌리는 아버지.</div>
+
+<div id="scene10" class="scene-number">#10. 식당 안.</div>
+<div class="narration">테이블로 다가와 자리에 앉는 부녀. 자주 오던 식당인지, 메뉴판을 보지도 않고 아버지가 손을 들어 종업원을 부른다. 종업원이 다가오자 아버지가 익숙하게 주문한다.</div>
+
+<div class="dialogue"><span class="character-name" data-character="아버지">아버지:</span>  쏘가리 매운탕 2인분 주세요.</div>
+<div class="dialogue"><span class="character-name" data-character="종업원">종업원:</span>  쏘가리 두 개랑... 더 주문하시는 건 없고요?</div>
+<div class="dialogue"><span class="character-name" data-character="딸">딸:</span>  소주도 한 병 주세요!</div>
+
+<div class="narration">딸의 갑작스런 주문에 놀라 딸을 보는 아버지. </div>
+
+<div class="dialogue"><span class="character-name" data-character="아버지">아버지:</span>  너 술 안 마시잖아. 갈 때도 네가 운전하게?</div>
+<div class="dialogue"><span class="character-name" data-character="딸">딸:</span>  그럼! 아빠 매운탕엔 소주 꼭 마시잖아. 자식 운전 가르쳐서 뭐해, 이럴 때 써먹어야지!</div>
+
+<div class="narration">아버지의 흔들리는 동공.</div>
+
+종업원	아이구, 딸내미 면허 따셨나 보네? 그래, 이럴 때 마시고 그러는 거죠. 소주 어떤 거로 가져다드릴까?
+<div class="dialogue"><span class="character-name" data-character="딸">딸:</span>  아빠 뭐 마시더라?</div> 
+<div class="dialogue"><span class="character-name" data-character="아버지">아버지:</span>  ... 후레쉬로...</div>
+
+<div id="scene11" class="scene-number">#11. 식당 안.</div>
+<div class="narration">호쾌한 손놀림으로 소주 뚜껑을 따 잔에 따르는 딸. 떨리는 손으로 받는 아버지. 잔만 받고, 내려놓으려 하는데, 딸이 반짝이는 눈으로 아버지를 보고 있다.</div>
+
+<div class="dialogue"><span class="character-name" data-character="아버지">아버지:</span>  ...왜?</div>
+<div class="dialogue"><span class="character-name" data-character="딸">딸:</span>  뭐해? 안 마시고? 이럴 때 마셔야지. 내가 아빠 술 따라주는 게 흔한 일인 줄 알아?</div>
+<div class="dialogue"><span class="character-name" data-character="아버지">아버지:</span>  어, 어... 그래...</div>
+
+<div class="narration">아버지는 딸의 눈치를 보며 떨리는 잔을 입술에 가져다 댄다. 소주가 입안으로 들어가자 딸은 자리에서 일어난다.</div>
+
+<div class="dialogue"><span class="character-name" data-character="딸">딸:</span>  나 화장실 좀 갔다 올게!</div>
+
+<div class="narration">딸이 시야에서 사라지자, 아버지는 머금고 있던 소주를 다시 잔에 뱉어내고, 테이블 아래 쓰레기통에 따라버린다. 입안에 남아있는 소주도 헹궈낼 심산인지, 컵에 담겨있던 물을 머금고 물 양치질을 하며, 뚜껑이 따여 있는 소주병을 들고 밖으로 나간다.
+잠시 후, 빈 병을 탁, 탁 털며 돌아온 아버지는, 화장실 쪽을 예의주시하며 조마조마하게 빈 소주병에 물을 채운다.</div>
+
+<div id="scene12" class="scene-number">#12. 저녁. 식당 앞.</div>
+<div class="narration">전화 중인 딸.</div>
+
+<div class="dialogue"><span class="character-name" data-character="딸">딸:</span>  어, 갈 때도 내가 운전해야지. 아빠 술 마셔서. ... 에이, 괜찮아. 나 운전 잘해! 응, 그럼. 어두워도 뭐, 쌍라이트 켜고 가면 되니까! ... 어, 조심해서 갈게. 응 이따 봐!</div>
+
+<div class="narration">딸이 전화를 끊자, 아버지는 지갑에 카드를 넣으며 식당에서 나온다. 그 모습을 본 딸은 고개 숙여 아버지에게 인사한다.</div>
+
+<div class="dialogue"><span class="character-name" data-character="딸">딸:</span>  잘 먹었습니다!</div> 
+<div class="dialogue"><span class="character-name" data-character="아버지">아버지:</span>  아유, 운전도 해주셨는데, 밥은 제가 사야죠.</div>
+<div class="dialogue"><span class="character-name" data-character="딸">딸:</span>  히히! 그러네! 나 그럼 가서 차 빼놓고 있을게!</div>
+
+<div class="narration">해맑게 달려가는 딸의 뒷모습을 착잡하게 보는 아버지. 그때 아버지의 전화기가 울린다.</div>
+
+<div class="dialogue"><span class="character-name" data-character="아버지">아버지:</span>  어, 여보. 어. 방금 저녁 먹고 나왔지. ... 그치, 밤 길이니까, 위험하면 내가 해야지. ... 아냐, 나 술 안 마셨어. ... 주영이는 마신 줄 아는데, 주영이 안 볼 때 물로 바꿔놨어, 내가. ... 어. 그래. ... 아, 참 그리고 여보. 다음 주엔 당신이 주영이랑 한 번 나와봐. ... 어, 좋았지, 좋았는데... 당신도 한번 당해보라고. </div>
+
+<div class="narration">그때, 딸이 전조등도 켜지지 않은 차를 몰고 아버지 앞에 서서 창문을 내리고 말한다.</div>
+
+<div class="dialogue"><span class="character-name" data-character="딸">딸:</span>  거기 오빠! 어디까지 가? 내가 태워다 줄게!</div>
+
+<div class="narration">그 모습에 헛웃음이 나오는 아버지. </div>
+
+<div class="dialogue"><span class="character-name" data-character="아버지">아버지:</span>  어, 주영이 왔다. 끊을게. 어. 집에서 보자... 꼭...</div>
+
+<div class="narration">전화를 끊고, 차를 향해 다가가는 아버지.</div>
+
+<div class="dialogue"><span class="character-name" data-character="아버지">아버지:</span>  oo 동 oo 아파트 가요?</div> 
+
+<div id="scene13" class="scene-number">epilogue. 낮. 301동 1203호. 주방.</div>
+<div class="narration">식탁 앞에 서서 흥미로운 표정으로 고지서를 확인하는 딸. 딸이 보고 있는 고지서 뒷면으로 경찰청 로고가 보이고, 다음으로 넘기면 도로교통부, 또 넘기면... 고지서를 전부 확인한 딸은 밝은 표정으로 고개를 들고 거실을 향해 간다.</div>
+
+<div class="dialogue"><span class="character-name" data-character="딸">딸:</span>  아빠!</div> 
+
+<div id="fin" class="scene-number">fin.</div>
+
         
-        동준, 열 받지만 크게 한숨을 내쉬고 불을 끄고 나간다. 문은 살짝 열어놓은 채.
-        
-        <div class="dialogue"><span class="character-name">예준:</span>            야! 문 똑바로 안 닫아! 야!</div>
-    
-        
-        #3. 저녁. 동준의 방. 
-        예준의 고함을 뒤로하고 자신의 방으로 들어와 문을 닫는 동준. 침대 옆 벽에 길게 기대어 앉아 생각에 잠긴다. 
-        
-        #4. 낮. 예준의 방. 동준의 회상.
-        양아치 끼가 물씬 나는 중학생 동준. 거실에 가방을 대충 던져놓고 문이 열려있는 예준의 방으로 들어간다. 아무도 없는 걸 알지만, 그래도 주위를 살피고 
-        살금살금 들어가 예준의 화장대에 놓인 담배를 집어 한 개비를 조심스럽게 꺼내고 최대한 원래 있던 모습과 똑같이 내려놓고, 살금살금 방을 나간다.
-        
-        #5. 저녁. 동준의 방. 동준의 회상.
-        침대에 걸터누워 핸드폰 보고있는 중학생 동준. 예준이 벌컥, 문을 열고 들어온다.
-        
-        <div class="dialogue"><span class="character-name">예준:</span>            야, 하동준! 니가 내 담배 건드렸냐?</div>
-    
-        동준, 당황하지만 티대지 않으려 노력한다.
-        
-        <div class="dialogue"><span class="character-name">동준:</span>            뭐? 아니거든?</div>
-        <div class="dialogue"><span class="character-name">예준:</span>            아니긴 뭐가 아니야, 내가 개수 다 세놨는데! 뒤질래? 내가 내꺼 훔쳐 피지 말랬지!</div>
-        <div class="dialogue"><span class="character-name">동준:</span>            ... 보통은 피지 말라고 하지 않냐?</div>
-        <div class="dialogue"><span class="character-name">예준:</span>            피든가 말든가, 내 알바 아니고, 내꺼 훔쳐 피거나, 학교에서 피다 걸려서 나 학교 불려가게 하면 뒤진다고 했냐, 안 했냐. 죽을래?</div>
-        <div class="dialogue"><span class="character-name">동준:</span>            아, 알았다고, 이 꼴초 아줌마야.</div>
-        <div class="dialogue"><span class="character-name">예준:</span>            이게 진짜 죽을라고.</div>
-    
-        살벌한 표정으로 동준에게 달려드는 예준. 동준을 덮쳐 마구 간지럽힌다. 동준은 아직 성장기가 오지 않아 예준에게 덩치와 힘, 모두 밀려 속수무책으로 
-        당하기만 한다.
-    
-        <div class="dialogue"><span class="character-name">동준:</span>            악! 악! 안 가져갈게! 안 건드린다고!</div>
-        <div class="dialogue"><span class="character-name">예준:</span>            더 당해봐야 돼, 너는. 오늘 아주, 버르장머리를 고쳐놓을라니까.</div>
-        <div class="dialogue"><span class="character-name">동준:</span>            안 건드릴게! 진짜 안 건드릴게! 악!</div>
-    
-        동준의 항복선언 후에도 한참을 더 간지럽히던 예준. 동준의 숨이 거의 넘어가려 하자 그제야 일어나 동준을 내려다본다. 
-        
-        <div class="dialogue"><span class="character-name">예준:</span>            한 번만 더 건드리면, 이 정도로 안 끝나. 알지?</div>
-    
-        무력하게 고개만 끄덕이는 동준.
-        
-        #6. 저녁. 동준의 방.
-        회상을 마친 동준. 나직하게 혼잣말을 내 뱉는다.
-        
-        <div class="dialogue"><span class="character-name">동준:</span>            저게 담배를 끊었다고...</div>
-    
-        닫힌 방문을 바라보며 고개를 갸웃대는 동준. 아무리 생각해도 이해가 안 되는 듯, 다시 혼잣말을 내 뱉는다.
-    
-        <div class="dialogue"><span class="character-name">동준:</span>            끊은 건 맞는 것 같은데...</div>
-    
-        말 끝을 흐리다가 번득, 무언가 떠오른 동준. 급하게 자리에서 일어나 문을 열고 밖으로 나간다.
-        
-        #7. 저녁. 예준의 방.
-        벌컥. 문을 열고 들어오는 동준 때문에 놀란 예준. 높게 들고 있던 핸드폰을 얼굴에 떨어트린다.
-    
-        <div class="dialogue"><span class="character-name">예준:</span>            악! ... 아... 뭐야, 뒤질래, 진짜? 노크 안 해?</div>
-    
-        동준, 딱히 신경 쓰지 않고 덤덤한 목소리로 예준에게 묻는다.
-        
-        <div class="dialogue"><span class="character-name">동준:</span>            야, 너 남자친구한테 맞고 사냐?</div>
-        <div class="dialogue"><span class="character-name">예준:</span>            (귀찮은 듯 동준을 쳐다보지도 않고) 아까 아니라고 했다.</div>
-        <div class="dialogue"><span class="character-name">동준:</span>            아, 그랬지. ... 진짜 아니야?</div>
-        <div class="dialogue"><span class="character-name">예준:</span>            아니라고.</div>
-        <div class="dialogue"><span class="character-name">동준:</span>            하긴, 니가 맞고 가만있을 성격은 아니지.</div>
-        <div class="dialogue"><span class="character-name">예준:</span>            알았으면 문 닫고 나가 새꺄. </div>
-    
-        동준, 문을 닫고 나갔다가, 다시 잽싸게 문을 열고 손만 집어넣어 불을 켠 후에 문을 닫고 도망친다.
-        
-        <div class="dialogue"><span class="character-name">예준:</span>            아나... 저 새끼가 진짜...</div>
-    
-        다시 동준을 부르기도 귀찮은지, 자리에서 일어나 불을 끄는 예준.
-        
-        #8. 낮. 학교. 2학년 2반 교실.
-        학교폭력 예방 교육 중인 교실. 동준은 지루한 듯 펜을 딱, 딱 튀기며 창 밖을 쳐다보는데, 시청각 자료의 대사가 귀에 꽂힌다.
-        
-        <div class="dialogue"><span class="character-name">시청각 자료:</span>       지속적인 폭행 대상자는 주변 사람들에게 본인이 폭행당하고 있다는 사실을 숨길 수 있으니, 주변 친구가 폭행당하는 낌새를 느끼면, 지속적이고 유심한 관찰이 필요합니다. </div>
-        
-        펜을 내려놓고 시청각 자료에 집중하는 동준.
-        
-        #9. 저녁. 동준의 집. 거실.
-        심각한 표정으로 들어오는 동준. 가방을 대충 던져놓고 예준의 방으로 들어간다. 
-        
-        #10. 저녁. 예준의 방.
-        문을 열고 들어와 방을 둘러보는 동준. 벽 한켠 옷걸이에 걸려있는 가방들을 뒤지는데, 한 가방에서 소독약과 연고, 밴드가 나온다. 동준, 물건들을 노려보며 
-        이를 악 물고.
-        
-        <div class="dialogue"><span class="character-name">동준:</span>            이, 개새끼가...</div>
-    
-        그때, 동준의 핸드폰이 울린다. 확인해보니 누나에게 온 카톡이다. 
-    
-        <div class="dialogue"><span class="character-name">예준(메세지)</span>	20분 후에 남자친구랑 같이 갈거니까 집 좀 치워놔. 빨리.</div>
-    
-        메세지를 확인하고 불타오르는 동준의 눈동자.
-        
-        #11. 저녁. 주방.
-        이글대는 눈빛으로 주방으로 오는 동준. 주방 이곳저곳을 헤집다가 싱크대 아래 수납장을 열고 칼통에서 식칼 하나를 꺼내 섬뜩한 눈빛으로 바라보며 상상에 빠진다.
-        
-        #12. 저녁. 동준의 상상. 
-        예준과 우락부락, 깡패처럼 험악한 인상을 가진 예준의 남자친구가 현관문을 열고 들어오자, 동준은 남자친구의 목에 식칼을 가져다 대고 나직한 목소리로 말한다.
-        
-        <div class="dialogue"><span class="character-name">동준:</span>            꺼져.</div>
-    
-        그러나 험악한 인상답게, 예준의 남자친구는 칼을 쥔 동준의 손을 단숨에 제압하고 오히려 동준에게 주먹을 날려 쓰러트린다.
-        
-        #13. 저녁. 주방. 
-        고개를 젓는 동준. 칼을 집어넣은 후 싱크대 수납장을 뒤지다가 바닥이 프라이팬 하나를 꺼내 들고, 바닥이 충분히 두꺼운지 확인하려는 듯 바닥을 두드려본다.
-        묵직한 소리가 들려오고, 동준은 다시 상상에 잠긴다. 
-        
-        #14. 저녁. 동준의 상상.
-        식탁에 마주 앉은 예준, 동준, 여전히 깡패 같은 예준의 남자친구. 동준은 의자 밑에 숨겨놓은 프라이팬을 꺼내 들어 남자친구의 머리를 세게 후려친다. 
-        
-        <div class="dialogue"><span class="character-name">동준:</span>            이 개새끼가!</div>
-    
-        머리를 부여잡은 남자친구의 위에 올라타 미친 사람처럼 프라이팬을 내리치는 동준.
-    
-        <div class="dialogue"><span class="character-name">동준:</span>            죽어, 죽어, 죽어!</div>
-    
-        뒤에서 예준이 비명을 지르며 동준을 뜯어 말린다. 머리에서 피를 흘리며 경련하는 예준의 남자친구. 동준은 미친 사람처럼 얼굴에 묻은 피를 손으로 문질러
-        피 범벅을 만들다가..
-        
-        #15. 저녁. 주방.
-        다시 고개를 젓는 동준. 문득 핸드폰을 꺼내 사진첩을 뒤진다. 꽤 오래된 예전 사진을 찾아내 살펴본다. 예준이 동준의 상상 속 예준의 남자친구와 비슷하게 
-        생긴 남자와 다정하게 붙어 있는 사진. 동준이 찍어준 듯 하다. 다시 상상에 빠지는 동준.
-        
-        #16. 저녁. 동준의 상상.
-        식탁에 모여 앉은 셋. 동준이 말한다.
-        
-        <div class="dialogue"><span class="character-name">동준:</span>            우리 누나, 다른 사람 만나고 있는 거 알아요?</div>
-        <div class="dialogue"><span class="character-name">예준:</span>            뭐? 무슨 소리 하는 거야? </div>
-        <div class="dialogue"><span class="character-name">남자친구:</span>         뭐? 그게 무슨 소리야?</div>
-    
-        동준은 핸드폰을 꺼내 사진을 보여주며 말한다. 
-        
-        <div class="dialogue"><span class="character-name">동준:</span>            봐요. 옆에 이 사람. 전에 만나던 사람인데, 못 잊고 다시 만나는 모양이더라고. 누나가 얘기 안 해요?</div>
-        충격에 빠져 사진을 자세히 들여다보는 예준과 남자친구. 
-        
-        <div class="dialogue"><span class="character-name">예준:</span>            ...미친놈이. 이게 몇 년 전 사진인데, 이걸 아직도 갖고 있어?</div>
-        <div class="dialogue"><span class="character-name">남자친구:</span>            그러게. 이땐 완전 단발이었는데?</div>
-    
-        단발이라는 말에 급하게 사진을 확인하는 동준. 고개를 들어 예준의 머리를 보면, 어깨를 한참 넘어가는 긴 머리다. 낭패라는 듯, 머리를 쥐어뜯는 동준.
-        
-        #17. 저녁. 동준의 집. 주방.
-        머리를 부여잡는 동준. 다른 방법이 없을까 미친 듯이 고개를 돌리며 주방을 살피는데, 현관 도어록을 여는 소리가 들린다. 
-        
-        <div class="dialogue"><span class="character-name">동준:</span>            이, 씨.. 왜 이렇게 빨리 왔어.</div>
-        우왕좌왕하다가 식탁에 올려진 프라이팬을 발견한 동준. 급하게 의자 밑에 숨겨놓고, 현관으로 달려간다. 
-        
-        #18. 저녁. 동준의 집. 현관 앞.
-        현관 앞에 선 동준. 살기등등한 표정으로 현관문을 노려보는데... 찰싹 붙어 문을 열고 들어오는 예준과 멀끔하게 생긴 남자친구. 서로를 마주 보며 웃는 두 사람이 
-        동준에게 느리게 보인다. 충격을 받았는지 멍하게 서 있는 동준. 
-        
-        <div class="dialogue"><span class="character-name">예준:</span>            뭐 하냐, 여기서? 인사 안 해?</div>
-        <div class="dialogue"><span class="character-name">매형:</span>            아, 여기가 동준이?</div>
-    
-        예준은 환하게 웃으며 고개를 끄덕이고, 그 모습을 본 매형도 환하게 웃는다. 그리곤 동준에게 예의를 차려 악수를 청하며 인사를 건넨다.
-        
-        <div class="dialogue"><span class="character-name">매형:</span>            반가워요. 예준이한테 얘기 많이 들었어요. </div>
-        <div class="dialogue"><span class="character-name">동준:</span>            (얼떨결에 내민 손을 잡으며) 아, 네...</div>
-        <div class="dialogue"><span class="character-name">매형:</span>            근데, 자기가 말한 것만큼 무섭게 생기진 않았는데...?</div>
-        <div class="dialogue"><span class="character-name">예준:</span>            아니긴 뭘 아니야. 눈이 부리부리- 해가지고. 밤에 마주치면 깜짝깜짝 놀란다니까. 장승인 줄 알고.</div>
-        <div class="dialogue"><span class="character-name">매형:</span>            에이. 잘 생겼구만. 뭘. 자기랑 똑같이 생겼어.</div>
-        <div class="dialogue"><span class="character-name">예준:</span>            죽을래! </div>
-    
-        티격대며 안으로 들어오는 둘은, 서로를 진심으로 사랑하는 커플의 모습이다. 멍하게 서 있다가 정신을 차렸는지, 90도로 공손하게 인사하는 동준.
-        
-        <div class="dialogue"><span class="character-name">동준:</span>            안녕하세요! 처음 뵙겠습니다, 매형!</div>
-    
-        갑작스런 동준의 인사에 둘은 깔깔대며 웃는다. 
-        
-        <div class="dialogue"><span class="character-name">예준:</span>            꺄하하! 매형이래! </div>
-        <div class="dialogue"><span class="character-name">매형:</span>            어! 그래, 처남! 앞으로 잘 지내보자고! </div>
-        <div class="dialogue"><span class="character-name">동준:</span>            네! 매형! 들어가시죠!</div>
-    
-        세 사람은 왁자지껄 웃으며 식탁으로 가고, 그런 셋의 뒷모습을 따라가다가 거실을 보면 동준의 가족사진 두 개가 보인다. 주방에선 식탁 의자를 끌다가 프라이팬을 
-        건드린 듯 요란한 소리와 세 사람의 말소리가 들려온다.
-        
-        <div class="dialogue"><span class="character-name">예준:</span>            야, 뭐냐 이게? 프라이팬이 왜 바닥에 있어?</div>
-        <div class="dialogue"><span class="character-name">동준:</span>            아! 내가 그걸로 뭣 좀 하려다가.</div>
-        <div class="dialogue"><span class="character-name">예준:</span>            계란 후라이도 맨날 태워 먹는 게 무슨. 이걸로 도둑 잡게?</div>
-        <div class="dialogue"><span class="character-name">동준:</span>            아냐, 도둑은...</div>
-    </div>
-        필사적으로 말을 돌리는 동준의 목소리에서.
-        
-        fin.          
-        </pre>
     </p>
-    <a href="index.html">← 책장으로 돌아가기</a>
 
     <script>
-        // 페이지 내 모든 텍스트에서 강조할 단어들을 자동으로 감지하는 함수
-        function highlightWords() {
-          // 페이지의 모든 텍스트를 가져옵니다.
-          const bodyText = document.body.innerHTML;
-    
-          // 모든 <span> 태그에 대해 클릭 이벤트 추가
-          document.querySelectorAll('.highlight').forEach(item => {
-            item.addEventListener('click', function() {
-              highlightSelectedWord(item.textContent);
-            });
+      // 인물별 색상 맵 
+      const characterColors = {
+        "딸": "highlight-juyoung",
+        "아버지": "highlight-jungnam",
+        "종업원": "highlight-boyfriend",
+        "내비게이션": "highlight-husband",
+        "순찰차": "highlight-police"
+      };
+  
+      // 인물 이름 클릭 이벤트 설정
+      document.querySelectorAll('.character-name').forEach(nameElement => {
+        nameElement.addEventListener('click', () => {
+          const character = nameElement.dataset.character; // 클릭한 인물의 이름
+          const highlightClass = characterColors[character]; // 해당 인물의 강조 클래스
+  
+          // 모든 대사에서 강조 제거
+          document.querySelectorAll('.dialogue').forEach(dialogue => {
+            dialogue.classList.remove(...Object.values(characterColors)); // 모든 강조 클래스 제거
           });
-        }
-    
-        // 선택된 단어와 동일한 단어들 강조
-        function highlightSelectedWord(selectedWord) {
-          // 모든 highlight 클래스를 가진 span 태그를 찾습니다.
-          const allWords = document.querySelectorAll('.highlight');
-          
-          allWords.forEach(word => {
-            if (word.textContent === selectedWord) {
-              word.classList.add('selected');  // 동일한 단어에 선택 효과 추가
-            } else {
-              word.classList.remove('selected');  // 다른 단어는 선택 효과 제거
-            }
+  
+          // 해당 인물의 대사 강조
+          document.querySelectorAll(`.character-name[data-character="${character}"]`).forEach(element => {
+            element.parentElement.classList.add(highlightClass); // 해당 대사의 부모 요소 강조
           });
-        }
+        });
+      });
+    </script>
     
-        // 페이지 로딩 후 자동으로 실행
-        window.onload = highlightWords;
-      </script>
+    <a href="index.html">← 책장으로 돌아가기</a>
+
+<!-- "맨 위로" 버튼 -->
+<button id="backToTop">▲ 위로</button>
 
 <script>
-    // 페이지 로딩 후 모든 단어를 <span> 태그로 감싸서 .highlight 클래스 추가
-    document.addEventListener("DOMContentLoaded", function() {
-      const wordsToHighlight = ["동준", "예준" , "남자친구" , "매형" , "시청각 자료료"];
-      let bodyText = document.body.innerHTML;
+  // "맨 위로" 버튼 가져오기
+  const backToTopButton = document.getElementById("backToTop");
 
-      wordsToHighlight.forEach(word => {
-        const regex = new RegExp(`(${word})`, 'g');
-        bodyText = bodyText.replace(regex, `<span class="highlight">$1</span>`);
-      });
+  // 스크롤 이벤트 리스너
+  window.addEventListener("scroll", () => {
+    // 페이지 스크롤 위치가 300px 이상이면 버튼 표시
+    if (window.scrollY > 300) {
+      backToTopButton.style.display = "block";
+    } else {
+      backToTopButton.style.display = "none";
+    }
+  });
 
-      document.body.innerHTML = bodyText;
-    });
-  </script>
+  // 버튼 클릭 이벤트 리스너
+  backToTopButton.addEventListener("click", () => {
+    // 페이지를 맨 위로 부드럽게 스크롤
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  });
+</script>
 
 </body>
 </html>
+
