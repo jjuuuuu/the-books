@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>책 1</title>
+    <link rel="stylesheet" href="styles.css">
+
     <style>
  /* 기본 스타일 */
  body {
@@ -12,75 +14,36 @@
       margin: 20px;
     }
 
-    @media (max-width: 600px) {
-  .narration {
-    max-width: 90%; /* 화면의 90% 너비로 제한 */
-  }
-}
 
-/* 씬 넘버 스타일 */
-    .scene-number {
-      font-weight: bold; /* 볼드체로 씬 넘버 강조 */
-      font-size: 1.2em; /* 크기를 살짝 키움 (선택 사항) */
-      margin-bottom: 5px; /* 아래 공간 추가 */
-      display: block; /* 씬 넘버를 한 줄로 표시 */
-    }
 
-    .dialogue {
-      display: inline-block;
-      max-width: 900px; /* 지문의 문단 너비 제한 */
-      margin: 1px 0;
-      padding-left: 50px; /* 대사 시작 위치 조정 */
-      text-indent: -45px; /* 첫 줄은 왼쪽으로 이동 */
-      border-radius: 5px;
-      line-height: 1.8; /* 줄 간격을 줄이려면 이 값을 낮추세요 */
-      display: block; /* 각 대사를 한 줄씩 표시 */
-      
-    }
-
-    .narration {
-      max-width: 900px; /* 지문의 문단 너비 제한 */
-      margin: 10px; /* 중앙 정렬 */
-      padding: 10px;
-      line-height: 1.8; /* 지문의 줄 간격 */
-      text-align: justify; /* 양쪽 정렬 */
-      font-style: normal; /* 지문을 기울임체로 표시 (선택 사항) */
-      color: #555; /* 지문 색상 변경 */
-    }
 
     
 
     /* 각 인물별 강조 스타일 */
     .highlight-dongjun {
+      display: inline-block;
       background-color: #f3e881;
       color: #000;
     }
 
     .highlight-yejun {
+      display: inline-block;
       background-color: #90caf9;
       color: #000;
     }
 
     .highlight-boyfriend {
+      display: inline-block;
       background-color: #f990e7;
       color: #000;
     }
 
     .highlight-husband {
+      display: inline-block;
       background-color: #90f9aa;
       color: #000;
     }
 
-    /* 인물 이름 클릭 스타일 */
-    .character-name {
-      font-weight: bold;
-      color: #555;
-      cursor: pointer;
-    }
-
-    .character-name:hover {
-      text-decoration: underline;
-    }
 
     #backToTop {
       position: fixed;
@@ -109,6 +72,8 @@
     </style>
 </head>
 <body>
+
+  <a href="index.html">← 책장으로 돌아가기</a>
 
   <h1>목차</h1>
   <ul class="table-of-contents">
