@@ -5,6 +5,25 @@ body {
     background-color: #f4f4f4;
 }
 
+    /* 인물 이름 클릭 스타일 */
+    .character-name {
+        font-weight: bold;
+        color: #555;
+        cursor: pointer;
+    }
+
+
+    .character-name:hover {
+        text-decoration: underline;
+    }
+
+
+@media (max-width: 600px) {
+    .narration {
+      max-width: 90%; /* 화면의 90% 너비로 제한 */
+    }
+}
+
 .bookshelf {
     position: relative;
     width: 100%;
@@ -51,4 +70,39 @@ body {
 .highlight:hover {
     background-color: #f0c040; /* 배경색을 바꾸어서 강조 */
     color: white; /* 글자 색 변경 */
+}
+
+/* 대사와 씬 넘버 간격 조정 */
+.dialogue + .scene-number {
+    margin-top: 20px; /* 원하는 간격 (픽셀 값 변경 가능) */
+}
+
+/* 씬 넘버 스타일 */
+.scene-number {
+    font-weight: bold; /* 볼드체로 씬 넘버 강조 */
+    font-size: 1.2em; /* 크기를 살짝 키움 (선택 사항) */
+    margin-bottom: 5px; /* 아래 공간 추가 */
+    display: block; /* 씬 넘버를 한 줄로 표시 */
+}
+
+.dialogue {
+    
+    max-width: 900px; /* 지문의 문단 너비 제한 */
+    margin: 1px 0;
+    padding-left: 50px; /* 대사 시작 위치 조정 */
+    text-indent: -45px; /* 첫 줄은 왼쪽으로 이동 */
+    border-radius: 5px;
+    line-height: 1.8; /* 줄 간격을 줄이려면 이 값을 낮추세요 */
+    display: block;  /* 각 대사를 한 줄씩 표시 */
+    
+}
+
+.narration {
+    max-width: 900px; /* 지문의 문단 너비 제한 */
+    margin: 10px; /* 중앙 정렬 */
+    padding: 10px;
+    line-height: 1.8; /* 지문의 줄 간격 */
+    text-align: justify; /* 양쪽 정렬 */
+    font-style: normal; /* 지문을 기울임체로 표시 (선택 사항) */
+    color: #555; /* 지문 색상 변경 */
 }
